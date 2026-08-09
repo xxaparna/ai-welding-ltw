@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Maximize2, X, BarChart3, Flame } from "lucide-react";
+import { API_URL } from "../services/api";
 import "./GraphGallery.css";
 
 const absorptivityGraphs = [
@@ -8,28 +9,28 @@ const absorptivityGraphs = [
     id: "abs-corr",
     title: "Absorptivity Correlation Matrix",
     description: "Heatmap illustrating Pearson correlation between power, speed, line energy, and absorptivity.",
-    image: "http://127.0.0.1:8000/figures/absorptivity_correlation_heatmap.png",
+    image: `${API_URL}/figures/absorptivity_correlation_heatmap.png`,
     tag: "Correlation"
   },
   {
     id: "abs-power",
     title: "Power vs Absorptivity Trend",
     description: "Scatter and regression curve demonstrating the positive impact of laser power on laser absorption.",
-    image: "http://127.0.0.1:8000/figures/absorptivity_power_vs_absorptivity.png",
+    image: `${API_URL}/figures/absorptivity_power_vs_absorptivity.png`,
     tag: "Parameter Analysis"
   },
   {
     id: "abs-dist",
     title: "Absorptivity Percentage Distribution",
     description: "Histogram and Kernel Density Estimate (KDE) for absorptivity dataset distribution.",
-    image: "http://127.0.0.1:8000/figures/absorptivity_absorptivity_pct_distribution.png",
+    image: `${API_URL}/figures/absorptivity_absorptivity_pct_distribution.png`,
     tag: "Distribution"
   },
   {
     id: "abs-pair",
     title: "Absorptivity Multi-Variable Pairplot",
     description: "Pairwise relationships across all engineered input features for absorptivity modeling.",
-    image: "http://127.0.0.1:8000/figures/absorptivity_pairplot.png",
+    image: `${API_URL}/figures/absorptivity_pairplot.png`,
     tag: "Feature Space"
   }
 ];
@@ -39,28 +40,28 @@ const temperatureGraphs = [
     id: "temp-corr",
     title: "Temperature Correlation Matrix",
     description: "Correlation heatmap identifying key thermal drivers including specific energy and line energy.",
-    image: "http://127.0.0.1:8000/figures/interface_temperature_correlation_heatmap.png",
+    image: `${API_URL}/figures/interface_temperature_correlation_heatmap.png`,
     tag: "Correlation"
   },
   {
     id: "temp-line-energy",
     title: "Line Energy vs Interface Temp",
     description: "Direct linear physical relationship between energy density (J/mm) and peak interface temperature.",
-    image: "http://127.0.0.1:8000/figures/interface_temperature_line_energy_vs_temperature.png",
+    image: `${API_URL}/figures/interface_temperature_line_energy_vs_temperature.png`,
     tag: "Physics Relation"
   },
   {
     id: "temp-dist",
     title: "Interface Temperature Distribution",
     description: "KDE distribution graph showing weld joint interface thermal ranges (°C).",
-    image: "http://127.0.0.1:8000/figures/interface_temperature_interface_temp_C_distribution.png",
+    image: `${API_URL}/figures/interface_temperature_interface_temp_C_distribution.png`,
     tag: "Distribution"
   },
   {
     id: "temp-pair",
     title: "Temperature Feature Pairplot",
     description: "Multi-dimensional pairplot matrix for interface temperature predictors.",
-    image: "http://127.0.0.1:8000/figures/interface_temperature_pairplot.png",
+    image: `${API_URL}/figures/interface_temperature_pairplot.png`,
     tag: "Feature Space"
   }
 ];
