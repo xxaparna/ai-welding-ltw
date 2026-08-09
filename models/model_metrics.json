@@ -1,0 +1,14 @@
+{
+    "absorptivity": {
+        "r2": 0.9902,
+        "mae": 0.401,
+        "rmse": 0.5007,
+        "testing_samples": 1000
+    },
+    "temperature": {
+        "r2": 0.9901,
+        "mae": 15.8815,
+        "rmse": 19.6862,
+        "testing_samples": 1000
+    }
+}

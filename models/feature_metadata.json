@@ -1,0 +1,20 @@
+{
+    "absorptivity_features": [
+        "P_W",
+        "V_mm_min",
+        "line_energy_J_mm",
+        "power_squared",
+        "speed_squared",
+        "power_speed_interaction",
+        "specific_energy"
+    ],
+    "temperature_features": [
+        "P_W",
+        "V_mm_min",
+        "line_energy_J_mm",
+        "power_squared",
+        "speed_squared",
+        "power_speed_interaction",
+        "specific_energy"
+    ]
+}

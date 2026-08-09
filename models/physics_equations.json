@@ -1,0 +1,14 @@
+{
+    "absorptivity": {
+        "equation": "A = -7.1616 + 0.2459 × Power - 0.0090 × Speed",
+        "intercept": -7.1616,
+        "power_coefficient": 0.2459,
+        "speed_coefficient": -0.0090
+    },
+
+    "temperature": {
+        "equation": "T = 31.6366 + 28.1227 × Line Energy",
+        "intercept": 31.6366,
+        "line_energy_coefficient": 28.1227
+    }
+}
