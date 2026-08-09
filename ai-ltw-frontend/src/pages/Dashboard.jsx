@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-import Header from "../components/layout/Header";
+import Header from "../components/Layout/Header";
 import PredictionForm from "../components/PredictionForm";
 import PredictionCard from "../components/PredictionCard";
 import PerformanceSection from "../components/PerformanceSection";
