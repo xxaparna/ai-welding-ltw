@@ -1,0 +1,325 @@
+/* Performance Section Styling */
+
+.performance-section {
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.performance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.header-left h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+}
+
+.header-left p {
+  color: #64748b;
+  font-size: 15px;
+  margin: 0;
+  max-width: 700px;
+}
+
+.holdout-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.performance-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.model-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  border-radius: 24px;
+  padding: 30px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 15px 35px rgba(148, 163, 184, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.absorptivity-model-card {
+  border-top: 4px solid #2563eb;
+}
+
+.temperature-model-card {
+  border-top: 4px solid #ef4444;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.model-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 12px;
+  padding: 6px 14px;
+}
+
+.abs-badge {
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+}
+
+.temp-badge {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.target-chip {
+  font-family: monospace;
+  font-size: 12px;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+
+.gauge-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+}
+
+.radial-meter {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+.gauge-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.gauge-bg {
+  fill: none;
+  stroke: #e2e8f0;
+  stroke-width: 8;
+}
+
+.gauge-fill {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1.5s ease-out;
+}
+
+.abs-fill {
+  stroke: #2563eb;
+}
+
+.temp-fill {
+  stroke: #ef4444;
+}
+
+.gauge-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gauge-value {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.gauge-label {
+  font-size: 9px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.primary-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metric-title {
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.metric-big-val {
+  font-size: 32px;
+  font-weight: 800;
+  color: #0f172a;
+  font-family: monospace;
+  letter-spacing: -0.5px;
+}
+
+.quality-pill {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.high-accuracy {
+  background: rgba(37, 99, 235, 0.12);
+  color: #1d4ed8;
+}
+
+.high-accuracy-temp {
+  background: rgba(239, 68, 68, 0.12);
+  color: #dc2626;
+}
+
+.metrics-breakdown {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.sub-metric-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sub-label {
+  font-size: 11px;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.sub-val {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0f172a;
+  font-family: monospace;
+}
+
+/* Legend */
+.telemetry-legend {
+  margin-top: 24px;
+  background: rgba(248, 250, 252, 0.8);
+  border: 1px dashed #cbd5e1;
+  border-radius: 16px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #475569;
+}
+
+.legend-icon {
+  color: #2563eb;
+  flex-shrink: 0;
+}
+
+/* Skeleton & Error states */
+.skeleton-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.skeleton-card {
+  height: 280px;
+  background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 24px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.error-card {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.error-icon {
+  color: #ef4444;
+}
+
+.retry-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ef4444;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .performance-grid {
+    grid-template-columns: 1fr;
+  }
+  .metrics-breakdown {
+    grid-template-columns: 1fr;
+  }
+}
