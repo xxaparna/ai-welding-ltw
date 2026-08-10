@@ -13,19 +13,24 @@ app = FastAPI(
 # -----------------------------
 # CORS Configuration (Production & Development)
 # -----------------------------
+allowed_origins = [
+    "https://ai-welding-ltw.vercel.app",
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "http://localhost:3000",
+]
+
 origins_env = os.getenv("CORS_ORIGINS", "")
 if origins_env:
-    origins = [origin.strip() for origin in origins_env.split(",") if origin.strip()]
-else:
-    origins = [
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-        "*"
-    ]
+    for origin in origins_env.split(","):
+        cleaned = origin.strip()
+        if cleaned and cleaned not in allowed_origins:
+            allowed_origins.append(cleaned)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=allowed_origins,
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
